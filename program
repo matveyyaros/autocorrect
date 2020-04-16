@@ -1,0 +1,20 @@
+import os 
+import fnmatch
+path = os.getcwd()
+t= len(os.listdir('.'))
+f=input("what folder to recycle(if the same then space)")
+
+standart = input("what is the format(with a dot):")
+i=0
+for file in os.listdir('.'): 
+    if fnmatch.fnmatch(file, '*.exe'):
+        continue
+    elif (file + standart) in os.listdir('.'):
+    	
+    	continue
+    os.rename(file, file+ standart) 
+    
+    
+
+end= input('end. press enter')
+
